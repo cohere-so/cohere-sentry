@@ -1,38 +1,38 @@
 {
-  "name": "@sentry/fullstory",
+  "name": "sentry-cohere",
   "version": "1.1.5",
-  "description": "The Sentry-FullStory integration creates a link from the Sentry Error to the FullStory replay. It also creates a link from the FullStory event to the Sentry error.",
+  "description": "The Sentry-Cohere integration creates a link from the Sentry Error to the Cohere Replay session.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "yarn clean && rollup -c",
-    "watch": "yarn clean && rollup -cw"
+    "build": "npm run clean && rollup -c",
+    "watch": "npm run clean && rollup -cw"
   },
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getsentry/sentry-fullstory.git"
+    "url": "git+https://github.com/cohere-so/sentry-cohere.git"
   },
   "author": "Stephen Cefali",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/getsentry/sentry-fullstory/issues"
+    "url": "https://github.com/cohere-so/sentry-cohere/issues"
   },
-  "homepage": "https://github.com/getsentry/sentry-fullstory#readme",
+  "homepage": "https://github.com/cohere-so/sentry-cohere#readme",
   "peerDependencies": {
-    "@fullstory/browser": ">=1.0.0",
+    "cohere-js": ">=1.0.0",
     "@sentry/browser": ">=4.0.0"
   },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.7.2",
-    "@fullstory/browser": "^1.0.1",
     "@sentry/browser": "^5.10.2",
     "@sentry/types": "^5.10.0",
+    "cohere-js": "^1.0.18",
     "rimraf": "^3.0.0",
     "rollup": "^1.26.3",
     "rollup-plugin-babel": "^4.3.3",

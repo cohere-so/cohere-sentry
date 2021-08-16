@@ -1,3 +1,3 @@
-import SentryFullStory from './SentryFullStory';
+import SentryCohere from './SentryCohere';
 
-export default SentryFullStory;
+export default SentryCohere;
