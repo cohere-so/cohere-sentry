@@ -1,5 +1,4 @@
 import * as Sentry from '@sentry/browser';
-import { Event } from '@sentry/types';
 import Cohere from 'cohere-js';
 
 /**
@@ -18,26 +17,23 @@ class SentryCohere {
   }
 
   setupOnce() {
-    Cohere.getSessionUrl((sessionUrl) => {
-      Sentry.addGlobalEventProcessor(async (event: Event) => {
-        const startTime = Math.max(
-          0,
-          Math.floor((event.timestamp ?? 0) - this.replayStartTime / 1000) - 2
-        );
-
-        const self = Sentry.getCurrentHub().getIntegration(SentryCohere);
-        // Run the integration ONLY when it was installed on the current Hub
-        if (self) {
+    const sessionUrlListener = (sessionUrl) => {
+      Sentry.configureScope((scope) => {
+        scope.addEventProcessor((event) => {
           event.contexts = {
             ...event.contexts,
-            cohere: {
-              cohereSessionUrl: `${sessionUrl}?startAt=${startTime}`,
+            Cohere: {
+              'Cohere Session URL': `${sessionUrl}${
+                event.timestamp ? `?ts=${event.timestamp * 1000}` : ''
+              }`,
             },
           };
-        }
-        return event;
+          return event;
+        });
       });
-    });
+    };
+
+    Cohere.addSessionUrlListener(sessionUrlListener);
   }
 }
 
