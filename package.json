@@ -1,7 +1,7 @@
 {
   "name": "sentry-cohere",
-  "version": "1.1.5",
-  "description": "The Sentry-Cohere integration creates a link from the Sentry Error to the Cohere Replay session.",
+  "version": "1.0.0",
+  "description": "The Sentry-Cohere integration creates a link from the Sentry error report to the Cohere Replay session.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
