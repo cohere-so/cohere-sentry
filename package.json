@@ -1,6 +1,6 @@
 {
   "name": "cohere-sentry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Cohere Sentry integration creates a link from the Sentry error report to the Cohere Replay session.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/cohere-so/cohere-sentry#readme",
   "peerDependencies": {
-    "cohere-js": ">=1.0.0",
+    "cohere-js": ">=1.0.19",
     "@sentry/browser": ">=4.0.0"
   },
   "dependencies": {},
