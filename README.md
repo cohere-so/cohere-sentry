@@ -1,10 +1,10 @@
-# sentry-cohere
+# cohere-sentry
 
-The Sentry-Cohere integration seamlessly integrates the Sentry and Cohere platforms. When you look at a browser error in Sentry, you will see a link to the Cohere session replay at that exact moment in time. When you are watching a Cohere replay and your user experiences an error, you will see a link that will take you to that error in Sentry.
+The Cohere Sentry integration creates a link from the Sentry error report to the Cohere Replay session.
 
 ## Pre-Requisites
 
-For the Sentry-Cohere integration to work, you must have the [Sentry browser SDK package](https://www.npmjs.com/package/@sentry/browser) and the [Cohere JS SDK package](https://www.npmjs.com/package/cohere-js/).
+For the Cohere Sentry integration to work, you must have the [Sentry browser SDK package](https://www.npmjs.com/package/@sentry/browser) and the [Cohere JS SDK package](https://www.npmjs.com/package/cohere-js/).
 
 ### On-Premise Installations
 
@@ -17,13 +17,14 @@ To install the stable version:
 with npm:
 
 ```
-npm install --save sentry-cohere
+npm install --save cohere-sentry
 ```
 
 with yarn:
+`
 
 ```
-yarn add sentry-cohere
+yarn add cohere-sentry
 ```
 
 ## Setup
@@ -35,7 +36,7 @@ To set up the integration, both Cohere and Sentry need to be initialized. Please
 ```
 import * as Sentry from '@sentry/browser';
 import Cohere from 'cohere-js';
-import SentryCohere from 'sentry-cohere';
+import SentryCohere from 'cohere-sentry';
 
 Cohere.init('INSERT_COHERE_API_KEY_HERE');
 

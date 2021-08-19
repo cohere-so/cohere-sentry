@@ -1,7 +1,7 @@
 {
-  "name": "sentry-cohere",
+  "name": "cohere-sentry",
   "version": "1.0.0",
-  "description": "The Sentry-Cohere integration creates a link from the Sentry error report to the Cohere Replay session.",
+  "description": "The Cohere Sentry integration creates a link from the Sentry error report to the Cohere Replay session.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -15,14 +15,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cohere-so/sentry-cohere.git"
+    "url": "git+https://github.com/cohere-so/cohere-sentry.git"
   },
   "author": "Stephen Cefali",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/cohere-so/sentry-cohere/issues"
+    "url": "https://github.com/cohere-so/cohere-sentry/issues"
   },
-  "homepage": "https://github.com/cohere-so/sentry-cohere#readme",
+  "homepage": "https://github.com/cohere-so/cohere-sentry#readme",
   "peerDependencies": {
     "cohere-js": ">=1.0.0",
     "@sentry/browser": ">=4.0.0"
